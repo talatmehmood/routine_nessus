@@ -2,7 +2,7 @@ import requests, json, time, urllib3, sys
 
 """
 You need to put site name and ID in below dict format with key as site name and value as folder ID appearing in the URL of nessus folder. 
-Lazy_nessus will use this key to rename the report. Like for example on the web interface, URL for your specific report will look like this:
+routine_nessus will use this key to rename the report. Like for example on the web interface, URL for your specific report will look like this:
 https://127.0.0.1:8834/#/scans/reports/1316/hosts, put the number after /reprots/ in url and place in the site dict in this format: 
 
 sites = {'Report_name_you_want':'1316'}
@@ -24,10 +24,10 @@ sites = {
 sleepPeriod = 5
 
 if len(sys.argv) <= 3:
-  print('Please give your arguments in this format: lazy_nessus.py <URL> <Username> <Password>')
+  print('Please give your arguments in this format: routine_nessus.py <URL> <Username> <Password>')
 
 elif sys.argv[1] == "-h" or sys.argv[1] == "--help":
-  print('Please give your arguments in this format: lazy_nessus.py <URL> <Username> <Password>')
+  print('Please give your arguments in this format: routine_nessus.py <URL> <Username> <Password>')
 else:
   BaseURL=sys.argv[1]
   Username=sys.argv[2]
